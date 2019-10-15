@@ -16,9 +16,9 @@ const tabs = [
 class Home extends React.Component{
     render(){
         return (
-            <div>
+            <div style={{height:'100%'}} className="home-box">
                 <Header></Header>        
-                    <div>
+                    <div style={{height:'79vh'}} className="talbes-box">
                         <Tabs tabs={tabs}
                         initialPage={1}
                         onChange={(tab, index) => { console.log('onChange', index, tab); }}

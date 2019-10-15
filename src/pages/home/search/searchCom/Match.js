@@ -109,7 +109,7 @@ class Match extends React.Component {
                                     </div>
                                 </div>
                                 <img ref='img'
-                                    className="player"
+                                    className="player1"
                                     randomstr={index+1+item.id+item.name}
                                     id={item.id}
                                     playstate={index+1+item.id+item.name==this.state.playState?'player':'pause'}
