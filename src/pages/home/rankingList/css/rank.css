@@ -1,0 +1,54 @@
+/* 排行榜 */
+.official-box{
+    margin-top: 150px;
+}
+.official-box>h3{
+    margin-left: 15px;
+}
+.official{
+    display: flex;
+}
+.section>li{
+    display: flex;
+    margin: 8px 0 8px 15px;
+    position: relative;
+}
+.section img{
+    width: 80px;
+    height: 80px;
+}
+.section span{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    color: #fff;
+    font-size: 10px;
+}
+.box-1 li{
+    width: 250px;
+    margin: 9.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+.global{
+    margin:0 15px;
+}
+.global>ul{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.global>ul>li{
+    margin: 8px 0 0 0;
+    position: relative;
+}
+.global p{
+    width: 80px;
+}
+.global img{
+    width: 80px;
+    height: 80px;
+}
+

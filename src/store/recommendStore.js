@@ -1,6 +1,6 @@
 import {observable,runInAction,action} from 'mobx'
 export default class RecommendStore{
-   structor(rootStore){
+   constructor(rootStore){
         this.rootStore=rootStore
     } 
 }
