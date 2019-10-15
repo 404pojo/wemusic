@@ -8,11 +8,13 @@ import { Route,Link,NavLink,Redirect,Switch} from 'react-router-dom'
 class Home extends React.Component{
     render(){
         return (
-            <div>
-                <Header></Header>
-                home
-                <Footer></Footer>
-            </div>
+
+                <div>
+                    <Header></Header>
+                    <Route path="/home/ranking" component={RankingList}></Route>
+                    <Footer></Footer>
+                </div>
+
         )
     }
 }

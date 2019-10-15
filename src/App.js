@@ -1,8 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom'
+import './assets/css/reset.css'
 import Home from './pages/home'
 import Player from './pages/player'
 import SongList from './pages/songList'
+import rankingSongList from './pages/home/rankingList/listDetails'
 import Page404 from './pages/page404'
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
           <Route path='/home' component={Home} />
           <Route path="/player" component={Player} />
           <Route path="/songList" component={SongList} />
+          <Route path="/ranking/listDetails/:id" component={rankingSongList}></Route>
           <Route component={Page404}/>
         </Switch>
       </div>
