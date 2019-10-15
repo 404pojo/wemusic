@@ -1,0 +1,40 @@
+ /*搜索框6*/
+ .searchContainer{
+     width:100%;
+     display: block;
+ }
+ .bar6 {
+     background: #ebecec;
+    display:flex;
+     align-items: center;
+    margin:17px 5px 7px 5px ;
+     border-radius: 15px;
+}
+ .bar6 input {
+     border:1px solid #ebecec;
+     background: transparent;
+     width:295px;
+     height:30px;
+ }
+ .search{    
+     width:30px;
+     height:30px;
+     display:flex; align-items: center;
+     padding-left:8px;
+     border-radius: 5px;
+   
+ }
+ .search img{
+     margin-left:2px;
+     width:16px;
+     height:16px;
+ }
+ .last{
+     width:30px;
+     height:30px;
+     font-size:12px;
+     text-align:center;
+     color:darkgray;
+     padding-top:7px;
+ }
+

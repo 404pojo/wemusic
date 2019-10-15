@@ -1,0 +1,59 @@
+.hotSearch{
+    width:100%;
+    padding:15px 10px 0
+}
+.introduce{
+    font-size: 12px;
+    line-height: 12px;
+    color: #666;
+}
+/* 第一个ul */
+.SearchCenter{
+    margin:10px 0 7px
+}
+.SearchCenter li{
+    display: inline-block;
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 0 14px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #333;
+    border:1px solid #ebecec;
+    border-radius: 20px;
+}
+/* 第二个ul */
+.SearchBottom{
+    width:100%
+}
+.SearchBottom li{
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 45px;
+}
+.SearchBottom .searchClock img{
+    width:15px;
+    height:15px;
+    margin:0 10px;
+}
+.SearchBottom div{
+    flex: 1;
+    width: 1%;  
+    display: flex;
+}
+.SearchBottom div span{
+    margin-right: 10px;
+    flex: 1;
+    width: 1%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size:14px;
+    color:#333;
+}

@@ -1,5 +1,10 @@
+// <<<<<<< HEAD
 import {observable,action,runInAction} from "mobx"
 // import { action } from '../../node_modules/mobx/lib/mobx'
+// =======
+// import {observable} from 'mobx'
+// import { action } from '../../node_modules/mobx/lib/mobx'
+// >>>>>>> 93d9917a590371f8acdfeb845059a161c3ef0407
 export default class PlayerStore{
     @observable cart=[{
         "id": 33894312,

@@ -4,6 +4,7 @@ import Home from './pages/home'
 import Player from './pages/player'
 import SongList from './pages/songList'
 import Page404 from './pages/page404'
+import './assets/css/reset.css'
 function App() {
   return (
     <HashRouter>
