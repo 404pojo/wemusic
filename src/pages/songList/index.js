@@ -43,7 +43,7 @@ class SongList extends React.Component{
             <div>
                 <div className="box">
                     <div className="bg bg-blur" style={{backgroundImage:`url(${cart.coverImgUrl})`}}></div>
-                    <div className="header" >
+                    <div className="header11" >
                         <div className="box1">
                             <div className="left">
                                 <div className="left1">
@@ -71,11 +71,11 @@ class SongList extends React.Component{
                 </div> */}
                 {this.state.changeimg?down2:up2}
                 <div className="Main_title2">
-                    <h1>歌曲列表</h1>
+                    <h4 className="gequ">歌曲列表</h4>
                     <div className="song">
-                        <ul>
+                        <ul className="ulul">
                             {songs.map((item,index)=>
-                            <li key={index}>
+                            <li key={index} className="lili">
                                 
                                 <div className="song_title">
                                     {/* <span className="index">{index+1}</span> */}
@@ -85,7 +85,7 @@ class SongList extends React.Component{
                                         <span>{item.ar[0].name}</span>
                                     </div>
                                 </div>
-                                <img src={player} alt="" className="player" />
+                                {/* <img src={player} alt="" className="player" /> */}
                             </li>)}       
                         </ul>
                     </div>

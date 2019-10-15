@@ -24,7 +24,7 @@ class RankingList extends React.Component{
         this.props.rankingStore.getRankingAllSection()  
     }
     render(){ 
-        const { fromJS } = require('immutable')     
+        // const { fromJS } = require('immutable')     
         //全部榜单
         let allList = this.props.rankingStore.allList
         //官方榜单

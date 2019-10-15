@@ -20,7 +20,7 @@ li{
     
 }
 
-.header{
+.header11{
     height: 186px;
     position: absolute;
 }
@@ -126,7 +126,7 @@ h2{
     height: 30px;
   }
   
-  h1{
+  .gequ{
       padding-left: 10px;
       font: 14px/20px "";
       font-weight: 900;
