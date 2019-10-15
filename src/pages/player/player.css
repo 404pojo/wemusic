@@ -1,7 +1,7 @@
 *{margin:0;padding:0;}
 .player1 {
-  text-align: center;height:100vh;
-  /* background:#413826; */
+  text-align: center;height:100%;
+  background:#413826;
   color:#fff;
   overflow: hidden;
   box-sizing:border-box;
@@ -25,16 +25,14 @@ li{list-style:none;}
 .player1 #main #disc{display:flex;flex-direction: column;justify-content: center;align-items: center;width:80vm;height:80vh;flex:1;}
 .player1 #main .disc{background:#000;width:300px;height:300px;box-shadow:0 0 14px #868478;border-radius:50%;display:flex;justify-content:center; align-items: center;margin-bottom:80px;}
 .player1 #main .disc div{width:220px;height:220px;border-radius:50%;}
-.player1 #main ul {height:400px;flex:1;overflow:auto;margin-top:40%;}
+.player1 #main ul {height:320px;flex:1;overflow:auto;margin-top:40%;}
 .player1 #main ul li{font:14px/40px "";}
 .player1 #main .main-bottom{width:80%;display:flex;justify-content: space-between;}
 .player1 footer{width:100%;overflow:hidden;display:flex;flex-direction: column;position:fixed;bottom:0;}
 .player1 footer div.playBtn{display:flex;justify-content: center;align-items:center;margin:30px 0;}
 .player1 footer div.am-slider-example{display:flex;justify-content: center;align-items:center;margin:30px 0;}
 .player1 footer div.am-slider-example Slider{width:600}
-
 .player1 footer span{display:block;width:80%;}
-
 
 .rotateImages{ -webkit-animation:myRotate 10s linear infinite;animation:myRotate 18s linear infinite;}
 @-webkit-keyframes myRotate{

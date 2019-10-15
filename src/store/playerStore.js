@@ -25,9 +25,10 @@ export default class PlayerStore{
         "level": "exhigh",
         "encodeType": "mp3"
     }];
-    @observable songAlbum = [];
-    @observable songInfo = [];
-    @observable artist = "wf";
+    @observable songAlbum = []; // 歌曲专辑
+    @observable songInfo = [];  // 歌曲信息
+    @observable artist = "wf";  // 歌手名
+    @observable musicId = [];   // 歌曲列表数组
     constructor(rootStore){
         this.rootStore=rootStore
     } 
@@ -56,6 +57,19 @@ export default class PlayerStore{
                 _this.songAlbum = res.songs[0].al;
                 _this.songInfo = res.songs[0]
                 _this.artist = res.songs[0].ar[0].name; 
+            })
+        })
+    }
+
+    @action.bound getMusicId(){
+        const _this = this;
+        fetch("http://106.12.79.128:666/personalized/newsong")
+        .then(body=>body.json())
+        .then(res=>{
+            runInAction(function(){
+                for(let item of res.result){
+                    _this.musicId.push(item.id);
+                }                
             })
         })
     }
