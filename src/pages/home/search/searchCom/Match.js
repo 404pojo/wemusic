@@ -1,11 +1,13 @@
 import React from 'react'
 import './Match.css'
 import { observer, inject } from 'mobx-react'
+import {withRouter} from "react-router-dom"
 import testPng from '../../../../assets/search.svg'
 import sq from '../../../../assets/icon1.png'
 import pause from '../../../../assets/player2.png'
 import player from '../../../../assets/player3.png'
 @inject('searchStore')
+@withRouter
 @observer
 class Match extends React.Component {
     constructor() {
@@ -36,6 +38,12 @@ class Match extends React.Component {
             e.currentTarget.setAttribute('playstate', 'player')
         }        
     }
+    jumpToPlay(id){
+        let { PLAYSONG, PAUSEPLAYER} = this.props.searchStore
+        PLAYSONG('', '', 'player')
+        PAUSEPLAYER('pause')
+        this.props.history.push({pathname:`/player/${id}`})
+    }
     render() {
         let _this=this
         /* //生成20位随机字符串用于区分所有歌曲
@@ -51,9 +59,9 @@ class Match extends React.Component {
 
         let { searchResult, searchSongs ,showPlayer} = this.props.searchStore
         let { artist, album, mv } = searchResult
-        //条件渲染  (其实不需要，只要将store中的需要的数据属性对应初始化好，即可)
+        //条件渲染 (返回的数据中有些没有album或者artist和mv，所以根据是否存在判断是否渲染)
         let renderAlbum = album ? (
-            <li>
+            <li onClick={this.jumpToPlay.bind(this,519504381)}>
                 <img src={album[0].blurPicUrl} alt="" />
                 <div>
                     <p>专辑:{album[0].name}</p>
@@ -63,7 +71,7 @@ class Match extends React.Component {
             </li>
         ) : (<span></span>)
         let renderArtist = artist ? (
-            <li>
+            <li onClick={this.jumpToPlay.bind(this,37820828)}>
                 <img src={artist[0].picUrl} alt="" />
                 <div>
                     <p>歌手:{artist[0].name}</p>
@@ -72,7 +80,7 @@ class Match extends React.Component {
             </li>
         ) : (<span></span>)
         let renderMv = mv ? (
-            <li>
+            <li onClick={this.jumpToPlay.bind(this,29004400)}>
                 <img src={mv[0].cover} alt="" />
                 <div>
                     <p>MV:{mv[0].name}</p>
@@ -100,7 +108,7 @@ class Match extends React.Component {
                         
                         {searchSongs.map((item, index) => (
                             <li key={index} >
-                                <div className="song_title">
+                                <div className="song_title" onClick={this.jumpToPlay.bind(this,item.id)}>
                                     <h3>{item.name}</h3>
                                     <div className="author">
                                         <img src={sq} alt="" />
