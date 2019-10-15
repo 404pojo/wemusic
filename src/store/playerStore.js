@@ -31,10 +31,10 @@ export default class PlayerStore{
     constructor(rootStore){
         this.rootStore=rootStore
     } 
-    @action.bound getMusicUrl(){
+    @action.bound getMusicUrl(id){
         const _this = this;
         // 1、请求发起时
-        fetch("http://106.12.79.128:666/song/url?id=1395252835")
+        fetch(`http://106.12.79.128:666/song/url?id=${id}`)
         .then(body=>body.json())
         .then(res=>{
             // 2、请求结束 修改状态
@@ -45,10 +45,10 @@ export default class PlayerStore{
             })
         })
     }
-    @action.bound getMusicInfo(){
+    @action.bound getMusicInfo(id){
         const _this = this;
         // 1、请求发起时
-        fetch("http://106.12.79.128:666/song/detail?ids=1395252835")
+        fetch(`http://106.12.79.128:666/song/detail?ids=${id}`)
         .then(body=>body.json())
         .then(res=>{
             // 2、请求结束 修改状态
