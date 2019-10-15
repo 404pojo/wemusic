@@ -183,15 +183,11 @@ export default class SearchStore {
                     })
             } else {
                 _this.showPlayer = ''
-                getMusicPlayerApi(id)
-                    .then(res => {
-                        _this.playSong.playState='pause'
-                        
-                    })
+                 _this.playSong.playState='pause'
             }
         })
     }
-      //底部播放组件，点击暂停
+      //底部播放组件，点击暂停播放
       @action.bound PAUSEPLAYER(item) {
         let _this = this
         runInAction(function () {
