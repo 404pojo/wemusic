@@ -1,6 +1,6 @@
 import React from  'react'
 import { Slider, WingBlank, WhiteSpace } from 'antd-mobile';
-import './player.css';
+import player from './player.css';
 import logo from "./img/232.jpg";
 import goBack from "./img/goBack.png";
 import share from "./img/share.png";

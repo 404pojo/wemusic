@@ -16,7 +16,7 @@ const tabs = [
 class Home extends React.Component{
     render(){
         return (
-            <div class="home">
+            <div>
                 <Header></Header>        
                     <div>
                         <Tabs tabs={tabs}

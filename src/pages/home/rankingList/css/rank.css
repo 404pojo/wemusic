@@ -1,14 +1,12 @@
 /* 排行榜 */
-
-.official-box {
-    margin-top: 160px; 
+.official-box{
+    margin-top: 150px;
 }
 .official-box>h3{
     margin-left: 15px;
 }
 .official{
     display: flex;
-    margin-top: 105px;
 }
 .section>li{
     display: flex;
