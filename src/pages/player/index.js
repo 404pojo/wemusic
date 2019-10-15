@@ -60,8 +60,10 @@ class Player extends React.PureComponent{
         this.props.history.go(-1);
     }
     componentDidMount(){
-        this.props.playerStore.getMusicUrl();
-        this.props.playerStore.getMusicInfo();
+        let id = this.props.match.params.id  
+        console.log(id)
+        this.props.playerStore.getMusicUrl(id);
+        this.props.playerStore.getMusicInfo(id);
         console.log(this.props.playerStore.songInfo);
         
         // 这里需要设置audio的canplay事件监听
