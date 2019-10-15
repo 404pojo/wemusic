@@ -4,7 +4,9 @@ import { observer, inject } from 'mobx-react'
 import iconImg from './img/icon1.png'
 import back from './img/back.png'
 import { list } from '../../../../node_modules/postcss/lib/postcss'
+import { withRouter } from 'react-router-dom'
 @inject("rankingStore")
+@withRouter
 @observer
 class Ranking extends React.Component{
     componentDidMount() {
@@ -16,6 +18,10 @@ class Ranking extends React.Component{
     //返回上一页
     back() {
         this.props.history.go(-1)
+    }
+    goDetail(id) {
+        // console.log(this.props.history)
+        this.props.history.push({pathname:`/player/${id}`})
     }
     render() {
         let playlist = this.props.rankingStore.playlist
@@ -48,7 +54,7 @@ class Ranking extends React.Component{
                     <h1>歌曲列表</h1>
                     <div className="song">
                         <ul>
-                            {playlist.tracks.map((item,index) =><li key={index}>                                
+                            {playlist.tracks.map((item,index) =><li key={index} onClick={this.goDetail.bind(this,item.id)}>                              
                                 <div className="song_title">
                                     <h3>{item.name}</h3>
                                     <div className="author">
