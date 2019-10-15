@@ -15,11 +15,9 @@ li{
     background-position: 50%;
     background-repeat: no-repeat;
     position: absolute;
-    filter: blur(2px)
-    
+    filter: blur(2px)   
 }
-
-.header{
+.bg .header1{
     height: 186px;
     position: absolute;
 }
@@ -33,30 +31,30 @@ li{
     top: 0;
     right: 0;
     bottom: 0;
-    /* z-index: 1; */
+    z-index: -1;
 }
-.box1{
+.box .box1{
     padding: 30px 15px;
     display: flex;
 }
-.img1{
+.box .img1{
     height: 126px;
     width: 126px;
 }
-.box1 .right{
+.box .box1 .right{
     padding-left: 10px;
 }
-.box1 .right h2{
+.box .box1 .right h2{
     color: white;
 }
 
 .Main_title2 h2{
     margin-top: 0;
   }
-  .Main_title2 .song ul{
+.Main_title2 .song ul{
     padding: 0;
   }
-  .Main_title2 .song ul li{
+.Main_title2 .song ul li{
     display: flex;
     justify-content: space-between;
     align-items: center;

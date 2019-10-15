@@ -2,8 +2,8 @@ import React from  'react'
 import './css/rankList.css'
 import { observer, inject } from 'mobx-react'
 import iconImg from './img/icon1.png'
-import player from './img/player.png'
 import back from './img/back.png'
+import { list } from '../../../../node_modules/postcss/lib/postcss'
 @inject("rankingStore")
 @observer
 class Ranking extends React.Component{
@@ -22,10 +22,10 @@ class Ranking extends React.Component{
         return ( 
             <div>
                 <div className="box">
-                    <div className="bg bg-blur" style={{backgroundImage:`url(${playlist.coverImgUrl})`}}></div>                 <div className="header" >
+                    <div className="bg bg-blur" style={{backgroundImage:`url(${playlist.coverImgUrl})`}}></div>                 <div className="header1" >
                         <div className="box1">
                             <img src={back} alt="" className="back" onClick={this.back.bind(this)}/>
-                            <div className="left">
+                            <div className="left ">
                                 <img src={playlist.coverImgUrl} className="img1"/>
                             </div>
                             <div className="right">
@@ -56,7 +56,6 @@ class Ranking extends React.Component{
                                         <span>{item.ar[0].name} - {item.al.name}</span>
                                     </div>
                                 </div>
-                                <img src={player} alt="" className="player" />
                             </li>  )}
                         </ul>
                     </div>

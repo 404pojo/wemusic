@@ -16,17 +16,8 @@ const tabs = [
 class Home extends React.Component{
     render(){
         return (
-<<<<<<< HEAD
-
-                <div>
-                    <Header></Header>
-                    <Route path="/home/ranking" component={RankingList}></Route>
-                    <Footer></Footer>
-                </div>
-
-=======
             <div>
-                <Header></Header>              
+                <Header></Header>        
                     <div>
                         <Tabs tabs={tabs}
                         initialPage={1}
@@ -36,9 +27,12 @@ class Home extends React.Component{
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
                             Content of first tab
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
-                            
-                        </div>
+                        {/* <Route path="/home/ranking" component={RankingList}> */}
+                        
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>  
+                            <RankingList></RankingList>                             
+                            </div>
+                        {/* </Route> */}
                         <div style={{ display: 'flex', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
                            <Search/>
                         </div>
@@ -47,7 +41,6 @@ class Home extends React.Component{
                     </div>
                 <Footer></Footer>
             </div>
->>>>>>> 93d9917a590371f8acdfeb845059a161c3ef0407
         )
     }
 }

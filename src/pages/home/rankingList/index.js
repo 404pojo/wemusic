@@ -1,7 +1,9 @@
 import React from  'react'
 import './css/rank.css'
 import { observer, inject } from 'mobx-react'
+import { withRouter } from 'react-router-dom'
 @inject("rankingStore")
+@withRouter
 @observer
 class RankingList extends React.Component{
     constructor() {

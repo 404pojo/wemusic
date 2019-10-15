@@ -4,6 +4,7 @@
 }
 .official{
     display: flex;
+    margin-top: 105px;
 }
 .section>li{
     display: flex;
@@ -23,7 +24,7 @@
 }
 .box-1 li{
     width: 250px;
-    margin: 8px;
+    margin: 9.5px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
