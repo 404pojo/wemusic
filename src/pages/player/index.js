@@ -140,7 +140,7 @@ class Player extends React.PureComponent{
         return (
             <div>
                 <div className="bg1 bg-blur1" style={{backgroundImage:`url(${songAlbum.picUrl})`}}></div>
-                <div className="player">
+                <div className="player1">
                     <header>
                         <div className="header-left">
                             <div className="left">
