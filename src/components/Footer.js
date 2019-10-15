@@ -35,8 +35,8 @@ class Footer extends React.Component {
     render() {
         let {playSong}=this.props.searchStore
         return (
-            <div className="footer" onClick={this.jumpToPlayer.bind(this,playSong.id)}>
-                <div className="single" >
+            <div className="footer" >
+                <div className="single" onClick={this.jumpToPlayer.bind(this,playSong.id)}>
                     <img src={playSong.img} alt="" />
                     <div>
                         <p className="songName">{playSong.name}</p>

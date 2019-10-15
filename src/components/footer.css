@@ -11,6 +11,7 @@
 .single{
     display:flex;
     align-items: center;
+    width:320px;
 }
 .single img{
     margin-left:25px;
