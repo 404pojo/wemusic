@@ -38,7 +38,7 @@ class RankingList extends React.Component{
         let officialSection = allSection.slice(0,4)
         // console.log(officialSection)
         return (
-            <div>
+            <div className="rankList">
                 <div className="official-box">
                     <h3>官方榜</h3>
                     <div className="official">

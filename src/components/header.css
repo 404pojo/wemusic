@@ -1,4 +1,4 @@
-.header{width:100%;height:84px;background-color: #d43c33;font:28px/84px '楷体';color:#fff}
+.header{width:100%;height:84px;background-color: #d43c33;font:28px/84px '楷体';color:#fff;top: 0;}
 .logoAndName{width:60%;margin:0 auto;display:flex;align-items: center;}
 .name{margin-left:8px;}
 .logoAndName img{width:44px;height:40px;}
