@@ -50,11 +50,11 @@ li{list-style:none;}
 .Jindu{display:flex;align-items:center;}
 
 /* 背景虚化 */
-.bg {
+.bg1 {
   height:100vh;
   text-align: center;
 }
-.bg-blur {
+.bg-blur1 {
   float: left;
   width: 100%;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ li{list-style:none;}
   filter: blur(22px);
 }
 
-.bg, .box .bg:after {
+.bg1, .box .bg1:after {
   position: absolute;
   left: 0;
   top: 0;

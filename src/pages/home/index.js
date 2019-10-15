@@ -16,8 +16,8 @@ const tabs = [
 class Home extends React.Component{
     render(){
         return (
-            <div>
-                <Header></Header>              
+            <div class="home">
+                <Header></Header>        
                     <div>
                         <Tabs tabs={tabs}
                         initialPage={1}
@@ -27,9 +27,9 @@ class Home extends React.Component{
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
                             Content of first tab
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
-                            
-                        </div>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>  
+                            <RankingList></RankingList>                             
+                            </div>
                         <div style={{ display: 'flex', justifyContent: 'center', height: '979px', backgroundColor: '#fff' }}>
                            <Search/>
                         </div>

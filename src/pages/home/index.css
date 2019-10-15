@@ -7,3 +7,6 @@
     border:0.8px solid #dd001b;
     width:25%
 }
+.home{
+    flex:1;overflow: hidden;
+}
