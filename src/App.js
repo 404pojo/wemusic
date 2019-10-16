@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route path='/home' component={Home} />
           <Route path="/player/:id" component={Player} />
-          <Route path="/songList" component={SongList} />
+          <Route path="/songList/:id" component={SongList} />
           <Route path="/ranking/listDetails/:id" component={rankingSongList}></Route>
           <Redirect from='/' to="/home"></Redirect>
           <Route component={Page404}/>

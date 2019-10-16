@@ -19,7 +19,9 @@ class SongList extends React.Component{
     }
     
     componentWillMount(){
-        this.props.songListStore.getsongList()
+        let {getsongList}=this.props.songListStore
+        let id=this.props.match.params.id
+        this.props.songListStore.getsongList(id)
     }
     changeClass(){
         this.setState({

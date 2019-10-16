@@ -7,7 +7,7 @@ export default class songListStore{
     @observable description=[]
     @observable playCount=[]
     
-    @action.bound getsongList(id=2909081825){
+    @action.bound getsongList(id){
         const _this=this
         fetch(`http://106.12.79.128:666/playlist/detail?id=${id}`)
         .then(body=>body.json())
