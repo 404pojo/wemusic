@@ -57,11 +57,7 @@
     position:absolute;
     right:20px;
 }
-
-
-
-
-  .bottom ul{
+.bottom ul{
     padding: 0;
   }
   .bottom ul li{
@@ -96,7 +92,7 @@
     color: rgb(109, 104, 104);
     padding-left: 4px;
   }
-  .bottom ul li img.player{
+  .bottom ul li img.player1{
     margin-right: 10px;
     width: 30px;
     height: 30px;

@@ -32,6 +32,8 @@ class Player extends React.PureComponent{
             isPlay:false,    // 是否在播放
             totalTime: "00:00",   // 总时间
             currentTime: "00:00", // 当前播放时间
+            nowTime:1,
+            allTime:1,
         }
         
     }
@@ -59,24 +61,56 @@ class Player extends React.PureComponent{
     goBack(){
         this.props.history.go(-1);
     }
+    // 上一首
+    previousSong(){
+        let ids = [];
+        this.props.playerStore.musicId.map(item=>{
+            this.props.playerStore.getMusicUrl(item);
+            this.props.playerStore.getMusicInfo(item);
+        });   // 将proxy对象转换为数组
+        console.log(ids)
+
+    }
+    // 下一首
+    nextSong(){
+        let ids = [];
+        this.props.playerStore.musicId.map(item=>{
+            this.props.playerStore.getMusicUrl(item);
+            this.props.playerStore.getMusicInfo(item);
+        });   // 将proxy对象转换为数组
+        console.log(ids)
+
+    }
     componentDidMount(){
-        let id = this.props.match.params.id  
-        console.log(id)
+        let id = this.props.match.params.id;    // 获取路由上的id
         this.props.playerStore.getMusicUrl(id);
         this.props.playerStore.getMusicInfo(id);
-        console.log(this.props.playerStore.songInfo);
+        this.props.playerStore.getMusicId();
         
         // 这里需要设置audio的canplay事件监听
         this.refs.myRef.addEventListener("canplay", () => {
             //获取总时间
             const totalTime = parseInt(this.refs.myRef.duration);
-            const cTime = parseInt(this.refs.myRef.currentTime);
+            this.state.allTime = parseInt(this.refs.myRef.duration);
+            
             this.setState({
                 totalTime: this.getTime(totalTime),
-                currentTime:this.getTime(cTime)
+                
             });
         });
-        
+
+        this.refs.myRef.addEventListener("timeupdate",()=>{
+            if(this.refs.myRef){
+                const cTime = parseInt(this.refs.myRef.currentTime);
+                // console.log(this.refs.mySilder.props.onChange)
+                this.setState({
+                    currentTime:this.getTime(cTime),
+                    nowTime: parseInt(this.refs.myRef.currentTime)
+                });
+            }
+        });
+
+        console.log(this.refs.myRef);
     }
     log = (name) => {
         return (value) => {
@@ -103,10 +137,10 @@ class Player extends React.PureComponent{
     };
     render(){
         // const { fromJS } = require('immutable')
-        const {artist,songInfo,songAlbum,cart} = this.props.playerStore;
-        // console.log(fromJS(songInfo))
-
-        // this.state.url = cart.url;
+        const {musicId,artist,songInfo,songAlbum,cart} = this.props.playerStore;
+        // console.log(musicId);
+        
+        
         const disc = <div id="disc">
                         {/* 中间转动的专辑图片 */}
                         <div className="disc">
@@ -138,11 +172,14 @@ class Player extends React.PureComponent{
                         <li>却又像风 琢磨不住</li>
                         <li>像手纹 像散发的香水味</li>
                         <li>像爱不释手的 红色高跟鞋</li>
-                    </ul>
+                    </ul>    
+        let allTime = this.state.allTime;
+        let nowTime = this.state.nowTime;
         return (
+            
             <div>
                 <div className="bg1 bg-blur1" style={{backgroundImage:`url(${songAlbum.picUrl})`}}></div>
-                <div className="player">
+                <div className="player1">
                     <header>
                         <div className="header-left">
                             <div className="left">
@@ -170,10 +207,12 @@ class Player extends React.PureComponent{
                                         <Slider
                                             style={{ width:600,marginLeft: 100, marginRight: 100}}
                                             defaultValue={0}
+                                            value={nowTime}
                                             min={0}
-                                            max={200}
+                                            max={allTime}
                                             onChange={this.log('change')}
                                             onAfterChange={this.log('afterChange')}
+                                            ref="mySilder"
                                         />
                                         <span style={{width:120,fontSize:30}}>{this.state.totalTime}</span>
                                     </div>
@@ -183,11 +222,11 @@ class Player extends React.PureComponent{
                         </div>
                         <div className="playBtn">
                             <span><img src={xh} width="32%"/></span>                    
-                            <span><img src={zbf} width="32%"/></span>                    
+                            <span onClick={this.previousSong.bind(this)}><img src={zbf} width="32%"/></span>                    
                             <span onClick={this.startPlay.bind(this)}><img ref="BoFang" src={stop} width="40%"/>                   
-                               <audio src={cart.url} autoPlay ref="myRef" />
+                               <audio src={cart.url} autoPlay loop ref="myRef" />
                             </span> 
-                            <span><img src={ybf} width="32%"/></span>                    
+                            <span onClick={this.nextSong.bind(this)}><img src={ybf} width="32%"/></span>                    
                             <span><img src={menu} width="32%"/></span>     
                         </div>               
                     </footer>

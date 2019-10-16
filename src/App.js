@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Home from './pages/home'
 import Player from './pages/player'
 import SongList from './pages/songList'
@@ -15,6 +15,7 @@ function App() {
           <Route path="/player/:id" component={Player} />
           <Route path="/songList" component={SongList} />
           <Route path="/ranking/listDetails/:id" component={rankingSongList}></Route>
+          <Redirect from='/' to="/home"></Redirect>
           <Route component={Page404}/>
         </Switch>
       </div>

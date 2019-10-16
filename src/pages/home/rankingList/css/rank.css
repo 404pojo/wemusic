@@ -1,6 +1,6 @@
 /* 排行榜 */
-.official-box{
-    margin-top: 150px;
+.rankList{
+    height: 100%;
 }
 .official-box>h3{
     margin-left: 15px;

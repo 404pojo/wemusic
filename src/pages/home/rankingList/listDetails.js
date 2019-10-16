@@ -3,7 +3,7 @@ import './css/rankList.css'
 import { observer, inject } from 'mobx-react'
 import iconImg from './img/icon1.png'
 import back from './img/back.png'
-import { list } from '../../../../node_modules/postcss/lib/postcss'
+
 import { withRouter } from 'react-router-dom'
 @inject("rankingStore")
 @withRouter

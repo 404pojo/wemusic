@@ -7,3 +7,9 @@
     border:0.8px solid #dd001b;
     width:25%
 }
+.home-box{
+    position: relative;
+}
+.tables-box{
+    position: absolute;
+}
