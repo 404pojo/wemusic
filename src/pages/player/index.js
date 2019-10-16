@@ -148,10 +148,10 @@ class Player extends React.PureComponent{
                         </div>
                         {/* 喜欢 下载 评论 信息 */}
                         <div className="main-bottom">
-                            <span><img src={heart} width="38%"/></span>
-                            <span><img src={download} width="38%"/></span>
-                            <span><img src={comment} width="38%"/></span>
-                            <span><img src={info} width="38%"/></span>
+                            <span><img src={heart} width="40px"/></span>
+                            <span><img src={download} width="40px"/></span>
+                            <span><img src={comment} width="40px"/></span>
+                            <span><img src={info} width="40px"/></span>
                         </div>
                     </div>;
         // 歌词
@@ -179,17 +179,17 @@ class Player extends React.PureComponent{
             
             <div>
                 <div className="bg1 bg-blur1" style={{backgroundImage:`url(${songAlbum.picUrl})`}}></div>
-                <div className="player1">
+                <div className="player1 player2">
                     <header>
                         <div className="header-left">
                             <div className="left">
-                                <a onClick={this.goBack.bind(this)}><img src={goBack} width="60%" /></a>
+                                <a onClick={this.goBack.bind(this)}><img src={goBack} width="50px" /></a>
                                 <div>
                                     <p>{songInfo.name}</p>
-                                    <p>{artist} ></p>
+                                    <p className="p-box">{artist} ></p>
                                 </div>
                             </div>
-                            <a href="#" className="share"><img src={share} width="35%"/></a>
+                            <a href="#" className="share"><img src={share} width="40px"/></a>
                         </div>
                     </header>
                     <section id="main">
