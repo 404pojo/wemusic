@@ -1,12 +1,18 @@
 *{margin:0;padding:0;}
+.p-box{
+  position: relative;
+  z-index:3;
+}
 .player1 {
   text-align: center;height:100%;
-  background:#413826;
   color:#fff;
   overflow: hidden;
   box-sizing:border-box;
-  position:absolute;
   width:100%;
+}
+.player2{
+  background:#413826;
+  position:absolute;
 }
 .player1:after {
   content: " ";
@@ -15,7 +21,7 @@
 
 li{list-style:none;}
 .player1 header{overflow:hidden;padding:10px;box-sizing:border-box;height:84px;width:100%;position: fixed;}
-.player1 header .header-left{display:flex;justify-content: space-between;}
+.player1 header .header-left{display:flex;justify-content: space-between;padding-right: 10px;}
 .player1 header .header-left .name-left div{display:flex;flex-direction: column;align-items: flex-start;}
 .player1 header .header-left a:nth-child(1){float:left;margin-top:20px;width:50px;}
 .player1 header .header-left div p{font:18px/32px "";width:200px;}
@@ -23,11 +29,11 @@ li{list-style:none;}
 .player1 header .header-left .share{float:right;margin-top:20px;}
 .player1 #main{width:80vm;height:80vh;margin:60px 0;}
 .player1 #main #disc{display:flex;flex-direction: column;justify-content: center;align-items: center;width:80vm;height:80vh;flex:1;}
-.player1 #main .disc{background:#000;width:300px;height:300px;box-shadow:0 0 14px #868478;border-radius:50%;display:flex;justify-content:center; align-items: center;margin-bottom:80px;}
+.player1 #main .disc{background:#000;width:300px;height:300px;box-shadow:0 0 14px #868478;border-radius:50%;display:flex;justify-content:center; align-items: center;margin-bottom:33px;margin-top:-10px;}
 .player1 #main .disc div{width:220px;height:220px;border-radius:50%;}
 .player1 #main ul {height:320px;flex:1;overflow:auto;margin-top:40%;}
 .player1 #main ul li{font:14px/40px "";}
-.player1 #main .main-bottom{width:80%;display:flex;justify-content: space-between;}
+.player1 #main .main-bottom{width:80%;display:flex;justify-content: space-around;}
 .player1 footer{width:100%;overflow:hidden;display:flex;flex-direction: column;position:fixed;bottom:0;}
 .player1 footer div.playBtn{display:flex;justify-content: center;align-items:center;margin:30px 0;}
 .player1 footer div.am-slider-example{display:flex;justify-content: center;align-items:center;margin:30px 0;}
@@ -72,3 +78,7 @@ li{list-style:none;}
   right: 0;
   bottom: 0;
 }
+/* .am-slider-wrapper{
+  width:200px;
+  height: 1px;
+} */
