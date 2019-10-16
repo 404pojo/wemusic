@@ -205,7 +205,7 @@ class Player extends React.PureComponent{
                                     <div className="Jindu">
                                         <span style={{width:120,fontSize:30}}>{this.state.currentTime}</span>
                                         <Slider
-                                            style={{ width:600,marginLeft: 100, marginRight: 100}}
+                                            style={{ width:500}}
                                             defaultValue={0}
                                             value={nowTime}
                                             min={0}
