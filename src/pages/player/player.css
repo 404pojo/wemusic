@@ -21,12 +21,12 @@
 
 li{list-style:none;}
 .player1 header{overflow:hidden;padding:10px;box-sizing:border-box;height:84px;width:100%;position: fixed;}
-.player1 header .header-left{display:flex;justify-content: space-between;padding-right: 10px;}
+.player1 header .header-left{display:flex;justify-content: space-between;}
 .player1 header .header-left .name-left div{display:flex;flex-direction: column;align-items: flex-start;}
 .player1 header .header-left a:nth-child(1){float:left;margin-top:20px;width:50px;}
 .player1 header .header-left div p{font:18px/32px "";width:200px;}
 .player1 header .header-left div p:nth-child(2){color:#868478}
-.player1 header .header-left .share{float:right;margin-top:20px;}
+.player1 header .header-left .share{margin-top:20px;}
 .player1 #main{width:80vm;height:80vh;margin:60px 0;}
 .player1 #main #disc{display:flex;flex-direction: column;justify-content: center;align-items: center;width:80vm;height:80vh;flex:1;}
 .player1 #main .disc{background:#000;width:300px;height:300px;box-shadow:0 0 14px #868478;border-radius:50%;display:flex;justify-content:center; align-items: center;margin-bottom:33px;margin-top:-10px;}

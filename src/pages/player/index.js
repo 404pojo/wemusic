@@ -148,10 +148,10 @@ class Player extends React.PureComponent{
                         </div>
                         {/* 喜欢 下载 评论 信息 */}
                         <div className="main-bottom">
-                            <span><img src={heart} width="40px"/></span>
-                            <span><img src={download} width="40px"/></span>
-                            <span><img src={comment} width="40px"/></span>
-                            <span><img src={info} width="40px"/></span>
+                            <span><img src={heart} width="30%"/></span>
+                            <span><img src={download} width="30%"/></span>
+                            <span><img src={comment} width="30%"/></span>
+                            <span><img src={info} width="30%"/></span>
                         </div>
                     </div>;
         // 歌词
@@ -183,13 +183,13 @@ class Player extends React.PureComponent{
                     <header>
                         <div className="header-left">
                             <div className="left">
-                                <a onClick={this.goBack.bind(this)}><img src={goBack} width="50px" /></a>
+                                <a onClick={this.goBack.bind(this)}><img src={goBack} width="50%" /></a>
                                 <div>
                                     <p>{songInfo.name}</p>
                                     <p className="p-box">{artist} ></p>
                                 </div>
                             </div>
-                            <a href="#" className="share"><img src={share} width="40px"/></a>
+                            <a href="#" className="share"><img src={share} width="20%"/></a>
                         </div>
                     </header>
                     <section id="main">
@@ -203,9 +203,9 @@ class Player extends React.PureComponent{
                             <WhiteSpace size="lg" />
                                 <WingBlank size="lg">
                                     <div className="Jindu">
-                                        <span style={{width:120,fontSize:30}}>{this.state.currentTime}</span>
+                                        <span style={{width:110,fontSize:16}}>{this.state.currentTime}</span>
                                         <Slider
-                                            style={{ width:500}}
+                                            style={{ width:190}}
                                             defaultValue={0}
                                             value={nowTime}
                                             min={0}
@@ -214,7 +214,7 @@ class Player extends React.PureComponent{
                                             onAfterChange={this.log('afterChange')}
                                             ref="mySilder"
                                         />
-                                        <span style={{width:120,fontSize:30}}>{this.state.totalTime}</span>
+                                        <span style={{width:'30%',fontSize:16}}>{this.state.totalTime}</span>
                                     </div>
                                 </WingBlank>
                             <WhiteSpace size="lg" />
