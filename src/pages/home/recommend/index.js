@@ -2,8 +2,8 @@ import React from 'react';
 import './Main.css';
 import Bg from "./Img/ear.png"
 import Author from "./Img/author.png"
-import Player from "./Img/播放.png"
-import Pause from "./Img/暂停.png"
+import Player from "./Img/player.png"
+import Pause from "./Img/pause.png"
 import { inject, observer } from "mobx-react"
 import {withRouter} from "react-router-dom"
 @inject('recommendStore','searchStore')
